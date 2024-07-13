@@ -2,6 +2,12 @@ import { join } from "jsr:@std/path@1/join";
 
 export type Type = "commonjs" | "module" | "unknown";
 
+/**
+ * Determine the type of the module at the given path.
+ *
+ * @param path The path to the module.
+ * @returns The type of the module.
+ */
 export function determineType(path: string): Type {
   const jsFilePath = join(path, ".determine-type.js");
   try {
