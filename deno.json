@@ -1,0 +1,14 @@
+{
+  "name": "@jlarky/determine-package-type",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./main.ts",
+    "./mod.ts": "./mod.ts"
+  },
+  "publish": {
+    "exclude": ["deno.lock"]
+  },
+  "tasks": {
+    "dev": "deno test --watch main.ts"
+  }
+}
