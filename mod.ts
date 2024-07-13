@@ -1,5 +1,12 @@
 import { join } from "jsr:@std/path@1/join";
 
+/**
+ * The type of the module.
+ *
+ * - `commonjs` - The module is a CommonJS module.
+ * - `module` - The module is an ECMAScript module.
+ * - `unknown` - The type of the module could not be determined.
+ */
 export type Type = "commonjs" | "module" | "unknown";
 
 /**
@@ -59,6 +66,17 @@ function runNode(filePath: string): { success: boolean; error: string } {
 const esmContent = `import "node:util";`;
 const cjsContent = `require("node:util");`;
 
+/**
+ * Print the type of the module at the given path.
+ *
+ * That's what you get from running the following command:
+ *
+ * ```sh
+ * deno run jsr:@jlarky/determine-package-type
+ * ```
+ *
+ * @param path The path to the module.
+ */
 export function printDetermineType(path: string) {
   const type = determineType(path);
   console.log(type);

@@ -1,6 +1,6 @@
 {
   "name": "@jlarky/determine-package-type",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "exports": {
     ".": "./main.ts",
     "./mod.ts": "./mod.ts"
